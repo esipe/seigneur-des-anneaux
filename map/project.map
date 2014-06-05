@@ -1,0 +1,799 @@
+MAP
+	IMAGETYPE      	PNG
+	EXTENT         	-45.226500 20.654525 -35.776500 26.709475
+	SIZE          	900	525
+	IMAGECOLOR     	255 255 255
+	NAME           	Glantrannail_Coron
+	FONTSET		./fonts/font.list
+	SHAPEPATH	./data/
+	PROJECTION
+		"init=epsg:4326"
+	END
+	WEB
+		METADATA
+	  		"wms_enable_request"      "*"
+			"wms_srs"                 "EPSG:4326"
+	 		"wms_title"               "Glantrannail_Coron"
+	  		"wms_online_resource"     "http://mapserver.esipe.geonef.fr/?map=/project/middle_earth/map/project.map&"
+			"wms_feature_info_mime_type"    "text/html"
+		END
+	END
+	LAYER
+		NAME	Rivers
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Rivers"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA 'water_polygone.shp'
+		CLASS
+			STYLE
+				COLOR 92 142 224
+				OPACITY 75
+			END
+		END
+	END
+	LAYER
+		NAME	Lakes
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Lakes"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA  "lakes.shp"
+		CLASS
+			STYLE
+				COLOR 92 142 224
+				OPACITY 75
+			END
+			STYLE
+				OUTLINECOLOR 74 74 210
+				WIDTH 5
+				OPACITY 50
+			END
+			STYLE
+				OUTLINECOLOR 164 164 243
+				WIDTH 2
+				OPACITY 50
+			END
+		END
+	END
+	LAYER
+		NAME	Mountains
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Mountains"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA  "montains.shp"
+		CLASS
+			STYLE
+				COLOR 169 150 150
+				OPACITY 50
+			END
+			STYLE
+				OUTLINECOLOR 119 88 88
+				WIDTH 5
+				OPACITY 50
+			END
+			STYLE
+				OUTLINECOLOR 75 42 42
+				WIDTH 2
+				OPACITY 50
+			END
+		END
+	END
+	LAYER
+		NAME	Forests
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Forests"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA  "forests.shp"
+		OPACITY 50
+		CLASS
+			STYLE
+				COLOR 20 170 20
+			END
+			STYLE
+				OUTLINECOLOR 30 190 30
+				WIDTH 5
+			END
+			STYLE
+				OUTLINECOLOR 40 220 40
+				WIDTH 2
+			END
+		END
+	END
+	LAYER
+		NAME	Seas
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Seas"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA "seas.shp"
+		OPACITY 50
+		CLASS
+			STYLE
+				COLOR 20 20 170
+			END
+			STYLE
+				OUTLINECOLOR 40 40 220
+				WIDTH 5
+			END
+			STYLE
+				OUTLINECOLOR 30 30 190
+				WIDTH 10
+			END
+		END
+	END
+	LAYER
+		NAME	Roads
+		EXTENT	-41.9983 21.2831 -38.5323 25.2007
+		METADATA
+			"wms_title"	"Roads"
+		END
+		TYPE	LINE
+		STATUS	ON
+		DATA "road.shp"
+		SIZEUNITS pixels
+		CLASS
+			EXPRESSION ('[TYPE]' ~* 'return$')
+			STYLE
+				COLOR 30 116 60
+				WIDTH 2
+			END
+			STYLE
+				COLOR 30 116 60
+				WIDTH 10
+				OPACITY 50
+			END
+			STYLE
+				COLOR 30 116 60
+				WIDTH 15
+				OPACITY 25
+			END
+		END
+		CLASS
+			EXPRESSION ('[TYPE]' ~* 'frodon$')
+			STYLE
+				COLOR 196 77 19
+				WIDTH 2
+			END
+			STYLE
+				COLOR 196 77 19
+				WIDTH 10
+				OPACITY 50
+			END
+			STYLE
+				COLOR 196 77 19
+				WIDTH 15
+				OPACITY 25
+			END
+
+		END
+		CLASS
+			STYLE
+				COLOR 0 0 0
+				WIDTH 7
+			END
+			STYLE
+				COLOR 255 255 0
+				WIDTH 5
+				OPACITY 75
+			END
+		END
+	END
+	
+	
+	
+	LAYER
+		NAME	Fields
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Fields"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA "fields.shp"
+		OPACITY 50
+		CLASS
+			STYLE
+				COLOR 255 255 128
+			END
+		END
+	END
+	
+	LAYER
+		NAME	Hills
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Hills"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA "hills.shp"
+		OPACITY 50
+		CLASS
+			STYLE
+				COLOR 255 128 0
+			END
+		END
+	END
+	LAYER
+		NAME	Marsh
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Marsh"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA "marsh.shp"
+		OPACITY 50
+		CLASS
+			STYLE
+				COLOR 64 0 0
+			END
+			STYLE
+				OUTLINECOLOR 90 0 0
+				WIDTH 3
+			END
+			STYLE
+				OUTLINECOLOR 40 0 0
+				WIDTH 5
+			END
+		END
+	END
+	LAYER
+		NAME	Regions
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Regions"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA "regions.shp"
+		MINSCALEDENOM 600000
+		CLASS
+			STYLE
+				OUTLINECOLOR 0 0 0
+				WIDTH 2
+			END
+		END
+	END
+	LAYER
+		NAME	Regions_Labels
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Regions_Labels"
+		END
+		TYPE	POINT
+		STATUS	ON
+		DATA "regions_labels.shp"
+		MINSCALEDENOM 600000
+		CLASS
+			TEXT '[name]'
+			LABEL
+				COLOR 0 0 0
+				TYPE truetype
+				FONT "bastarda"
+				SIZE 20
+				POSITION AUTO
+				PARTIALS FALSE
+				SHADOWSIZE 2 2
+				SHADOWCOLOR 125 125 125
+			END
+			STYLE
+				COLOR 0 0 0
+			END
+		END
+	END
+		LAYER
+		NAME	Territories_Labels
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Territories_Labels"
+		END
+		TYPE	POINT
+		STATUS	ON
+		DATA "territories_labels.shp"
+		MAXSCALEDENOM 600000
+		CLASS
+			TEXT '[name]'
+			LABEL
+				COLOR 0 0 0
+				TYPE truetype
+				FONT "bastarda"
+				SIZE 20
+				POSITION AUTO
+				PARTIALS FALSE
+				SHADOWSIZE 2 2
+				SHADOWCOLOR 125 125 125
+			END
+			STYLE
+				COLOR 0 0 0
+			END
+		END
+	END
+	LAYER
+		NAME	Territories
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Territories"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA "territories.shp"
+		MAXSCALEDENOM 600000
+		CLASS
+			STYLE
+				OUTLINECOLOR 0 0 0
+				WIDTH 2
+			END
+		END
+	END
+	LAYER
+		NAME	Evil_Presence
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Evil_Presence"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA "territories.shp"
+		CLASSITEM "EVIL"
+		OPACITY 50
+		CLASS
+			EXPRESSION ([EVIL]<=10)
+			STYLE
+				COLOR 0 255 0
+			END
+		END
+		CLASS
+			EXPRESSION ([EVIL]>10 AND [EVIL]<=20)
+			STYLE
+				COLOR 30 230 0
+			END
+		END
+		CLASS
+			EXPRESSION ([EVIL]>20 AND [EVIL]<=30)
+			STYLE
+				COLOR 60 200 0
+			END
+		END
+		CLASS
+			EXPRESSION ([EVIL]>30 AND [EVIL]<=40)
+			STYLE
+				COLOR 90 170 0
+			END
+		END
+		CLASS
+			EXPRESSION ([EVIL]>40 AND [EVIL]<=50)
+			STYLE
+				COLOR 120 140 0
+			END
+		END
+		CLASS
+			EXPRESSION ([EVIL]>50 AND [EVIL]<=60)
+			STYLE
+				COLOR 140 120 0
+			END
+		END
+		CLASS
+			EXPRESSION ([EVIL]>60 AND [EVIL]<=70)
+			STYLE
+				COLOR 170 90 0
+			END
+		END
+		CLASS
+			EXPRESSION ([EVIL]>70 AND [EVIL]<=80)
+			STYLE
+				COLOR 200 60 0
+			END
+		END
+		CLASS
+			EXPRESSION ([EVIL]>80 AND [EVIL]<=90)
+			STYLE
+				COLOR 230 30 0
+			END
+		END
+		CLASS
+			EXPRESSION ([EVIL]>90 AND [EVIL]<=100)
+			STYLE
+				COLOR 255 0 0
+			END
+		END
+	END
+	LAYER
+		NAME	Species
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Species"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA "territories.shp"
+		CLASSITEM "SPECIES"
+		CLASS
+			EXPRESSION 'Hobbits'
+			STYLE
+				OPACITY 100
+				MINSCALEDENOM 950000
+				COLOR 40 200 40
+			END
+			STYLE
+				OPACITY 50
+				MINSCALEDENOM 550000
+				MAXSCALEDENOM 950000
+				COLOR 40 200 40
+			END
+			STYLE
+				OPACITY 25
+				MAXSCALEDENOM 550000
+				COLOR 40 200 40
+			END
+		END
+		CLASS
+			EXPRESSION 'Wizards'
+			STYLE
+				OPACITY 100
+				MINSCALEDENOM 950000
+				COLOR 120 120 120
+			END
+			STYLE
+				OPACITY 50
+				MINSCALEDENOM 550000
+				MAXSCALEDENOM 950000
+				COLOR 120 120 120
+			END
+			STYLE
+				OPACITY 25
+				MAXSCALEDENOM 550000
+				COLOR 120 120 120
+			END
+		END
+		CLASS
+			EXPRESSION 'Humans'
+			STYLE
+				OPACITY 100
+				MINSCALEDENOM 950000
+				COLOR 255 0 255
+			END
+			STYLE
+				OPACITY 50
+				MINSCALEDENOM 550000
+				MAXSCALEDENOM 950000
+				COLOR 255 0 255
+			END
+			STYLE
+				OPACITY 25
+				MAXSCALEDENOM 550000
+				COLOR 255 0 255
+			END
+		END
+		CLASS
+			EXPRESSION 'Dwarves'
+			STYLE
+				OPACITY 100
+				MINSCALEDENOM 950000
+				COLOR 0 255 255
+			END
+			STYLE
+				OPACITY 50
+				MINSCALEDENOM 550000
+				MAXSCALEDENOM 950000
+				COLOR 0 255 255
+			END
+			STYLE
+				OPACITY 25
+				MAXSCALEDENOM 550000
+				COLOR 0 255 255
+			END
+		END
+		CLASS
+			EXPRESSION 'Elvens'
+			STYLE
+				OPACITY 100
+				MINSCALEDENOM 950000
+				COLOR 0 0 255
+			END
+			STYLE
+				OPACITY 50
+				MINSCALEDENOM 550000
+				MAXSCALEDENOM 950000
+				COLOR 0 0 255
+			END
+			STYLE
+				OPACITY 25
+				MAXSCALEDENOM 550000
+				COLOR 0 0 255
+			END
+		END
+		CLASS
+			EXPRESSION 'Dark_Elvens'
+			STYLE
+				OPACITY 100
+				MINSCALEDENOM 950000
+				COLOR 0 0 0
+			END
+			STYLE
+				OPACITY 50
+				MINSCALEDENOM 550000
+				MAXSCALEDENOM 950000
+				COLOR 0 0 0
+			END
+			STYLE
+				OPACITY 25
+				MAXSCALEDENOM 550000
+				COLOR 0 0 0
+			END
+		END
+		CLASS
+			EXPRESSION 'Orcs'
+			STYLE
+				OPACITY 100
+				MINSCALEDENOM 950000
+				COLOR 100 190 20
+			END
+			STYLE
+				OPACITY 50
+				MINSCALEDENOM 550000
+				MAXSCALEDENOM 950000
+				COLOR 100 190 20
+			END
+			STYLE
+				OPACITY 25
+				MAXSCALEDENOM 550000
+				COLOR 100 190 20
+			END
+		END
+		CLASS
+			EXPRESSION 'Goblins'
+			STYLE
+				OPACITY 100
+				MINSCALEDENOM 950000
+				COLOR 0 250 0
+			END
+			STYLE
+				OPACITY 50
+				MINSCALEDENOM 550000
+				MAXSCALEDENOM 950000
+				COLOR 0 250 0
+			END
+			STYLE
+				OPACITY 25
+				MAXSCALEDENOM 550000
+				COLOR 0 250 0
+			END
+		END
+		CLASS
+			STYLE
+				OPACITY 100
+				MINSCALEDENOM 950000
+				COLOR 255 255 255
+			END
+			STYLE
+				OPACITY 50
+				MINSCALEDENOM 550000
+				MAXSCALEDENOM 950000
+				COLOR 255 255 255
+			END
+			STYLE
+				OPACITY 25
+				MAXSCALEDENOM 550000
+				COLOR 255 255 255
+			END
+		END
+	END
+	LAYER
+		NAME	Middle_Earth
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Middle_Earth"
+		END
+		TYPE	RASTER
+		STATUS	ON
+		DATA "middleEarth.jpg"
+	END
+	LAYER
+		NAME	POI
+		EXTENT -42.618764 22.007776 -37.831402 25.075209
+		METADATA
+			"wms_title"	"POI"
+                        "wms_feature_info_mime_type" "text/html"
+		END
+		TEMPLATE "template.html"
+
+		TYPE	POINT
+		STATUS	ON
+		DATA  "poi_points.shp"
+		CLUSTER
+			MAXDISTANCE 40
+			REGION "ellipse"
+		END
+		SIZEUNITS pixels
+		LABELITEM "Cluster:FeatureCount"
+		CLASS
+			MINSCALEDENOM 300000
+			STYLE
+				SYMBOL "circle"
+				COLOR 255 255 128
+				OUTLINECOLOR 0 0 0
+				WIDTH 1
+				SIZE 30
+			END
+			LABEL
+				COLOR 0 0 0
+				TYPE truetype
+				FONT "arial"
+				SIZE 20
+				OFFSET -2 -2
+				POSITION cc
+				PARTIALS FALSE
+				SHADOWSIZE 2 2
+				SHADOWCOLOR 125 125 125
+			END
+		END
+		CLASS
+			MAXSCALEDENOM 300000
+			EXPRESSION ('[type]' = "frodon")
+			STYLE
+				SYMBOL './symbols/ring.png'
+				SIZE 50
+			END
+		END
+		CLASS
+			MAXSCALEDENOM 300000
+			EXPRESSION ('[type]' = "pont")
+			STYLE
+				SYMBOL './symbols/stonebridge.png'
+				SIZE 60
+			END
+		END
+		CLASS
+			MAXSCALEDENOM 300000
+			EXPRESSION ('[type]' = "ville")
+			STYLE
+				SYMBOL './symbols/castle.png'
+				SIZE 60
+			END
+		END
+		CLASS
+			MAXSCALEDENOM 300000
+			EXPRESSION ('[type]' = "lieu")
+			STYLE
+				SYMBOL './symbols/lieu.png'
+				SIZE 70
+			END
+		END
+		CLASS
+			MAXSCALEDENOM 300000
+			EXPRESSION ('[type]' = "bilbon")
+			STYLE
+				SYMBOL './symbols/dragon.png'
+				SIZE 60
+			END
+		END
+		CLASS
+			MAXSCALEDENOM 300000
+			EXPRESSION ('[type]' = "bataille")
+			STYLE
+				SYMBOL './symbols/battle.png'
+				SIZE 60
+			END
+		END
+		CLASS
+			MAXSCALEDENOM 300000
+			EXPRESSION ('[type]' = "divers")
+			STYLE
+				SYMBOL './symbols/divers.png'
+				SIZE 70
+			END
+		END
+		CLASS
+			MAXSCALEDENOM 300000
+			STYLE
+				SYMBOL "circle"
+				COLOR 255 255 128
+				OUTLINECOLOR 0 0 0
+				WIDTH 1
+				SIZE 30
+			END
+			LABEL
+				COLOR 0 0 0
+				TYPE truetype
+				FONT "arial"
+				SIZE 20
+				OFFSET -2 -2
+				POSITION cc
+				PARTIALS FALSE
+				SHADOWSIZE 2 2
+				SHADOWCOLOR 125 125 125
+			END
+		END
+
+	END
+	LAYER
+		NAME	Limits
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Limits"
+		END
+		TYPE	POLYGON
+		STATUS	ON
+		DATA "regions.shp"
+		CLASS
+			MINSCALEDENOM 950000
+			STYLE	
+				COLOR 170 170 127
+				OUTLINECOLOR 0 0 0
+				WIDTH 4
+			END
+		END
+		CLASS
+			MINSCALEDENOM 550000
+			MAXSCALEDENOM 950000
+			STYLE	
+				COLOR 255 255 128
+				OUTLINECOLOR 0 0 0
+				WIDTH 3
+			END
+		END
+		CLASS
+			MAXSCALEDENOM 550000
+			STYLE	
+				OUTLINECOLOR 0 0 0
+				WIDTH 2
+			END
+		END
+	END
+	LAYER
+		NAME	Species_Labels
+		EXTENT	-45.226500 20.654525 -35.776500 26.709475
+		METADATA
+			"wms_title"	"Species_Labels"
+		END
+		TYPE	POINT
+		STATUS	ON
+		DATA "territories_labels.shp"
+		CLUSTER
+			MAXDISTANCE 30
+			REGION "ellipse"
+			GROUP '[SPECIES]'
+		END
+
+		CLASS
+			TEXT  '[SPECIES]'
+			LABEL
+				COLOR 17 37 176
+				TYPE truetype
+				FONT "bastarda"
+				SIZE 20
+				POSITION AUTO
+				PARTIALS FALSE
+				SHADOWSIZE 2 2
+				SHADOWCOLOR 125 125 125
+			END
+			STYLE
+				COLOR 0 0 0
+			END
+		END
+		
+	END
+	SYMBOL
+ 		NAME "circle"
+		TYPE ellipse
+		FILLED true
+		POINTS
+			1 1
+		END
+	END
+END
+
