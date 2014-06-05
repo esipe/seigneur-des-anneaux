@@ -37,9 +37,9 @@ Auteurs
 -------
 
 Projet réalisé par :
- * Mathilde Girardet
- * Christophe Cannard
- * Benoît Calvet
+ * Mathilde Girardet <mgirar07@etudiant.univ-mlv.fr>
+ * Christophe Cannard <ccannard@etudiant.univ-mlv.fr>
+ * Benoît Calvet <bcalvet@etudiant.univ-mlv.fr>
 
 étudiants IG2 de
 [l'École Supérieure D'Ingénieurs de l'Université Paris-Est Marne-la-Vallée (ESIPE)](http://esipe.u-pem.fr/),
